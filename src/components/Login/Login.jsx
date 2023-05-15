@@ -121,7 +121,7 @@ const Login = () => {
             <input className="mt-3 btn border-none text-primary bg-accent hover:text-secondary tracking-wider w-full max-w-xs" type="submit" value='Login'/>
             <p className="text-sm mt-2 mb-5">Don't have a account?<Link to="/signup" className="text-accent"> Create now</Link></p>
           <div className="divider">OR</div>
-            <input className="btn btn-outline text-primary hover:text-secondary hover:bg-primary tracking-wider w-full max-w-xs" type="submit" value='Login with google'/>
+            <input className="btn btn-outline text-primary hover:text-secondary hover:bg-primary tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>
           </form>
         </div>
       </div>

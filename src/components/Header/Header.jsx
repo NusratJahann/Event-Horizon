@@ -2,8 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { IconChevronDown, IconMenu } from "@tabler/icons-preact";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth)
   const navItems = (
     <React.Fragment>
       <li>
