@@ -4,9 +4,10 @@ import Banner from "../components/Home/Banner/Banner";
 import Login from "../components/Login/Login";
 import Contact from "../components/Contact/Contact";
 import SignUp from "../components/SignUp/SignUp";
-import Venues from "../components/Venues/Venues";
 import SetRole from "../components/SetRole/SetRole";
 import AllVenues from "../components/AllVenues/AllVenues";
+import RequireAuth from "../components/Login/RequireAuth"
+import Venues from "../components/Home/Banner/Venues";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/role",
-        element: <SetRole/>,
+        element: <RequireAuth><SetRole/></RequireAuth>,
       },
       {
         path: "/allvenues",
