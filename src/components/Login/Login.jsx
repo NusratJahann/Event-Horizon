@@ -1,14 +1,13 @@
 // import { GoogleAuthProvider, getAuth, signInWithPopup, useSignInWithGoogle } from "firebase/auth";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { getAuth } from "firebase/auth";
 import React from "react";
-import app from "../../firebase.init";
 import Loading from "../Shared/Loading/Loading";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Login = () => {
-  const auth = getAuth(app);
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
   const {
     register,
@@ -33,14 +32,18 @@ const Login = () => {
         //     })
         // };
         let signInError;
+        const navigate = useNavigate();
+        const location = useLocation();
+        let from = location.state?.from?.pathname || "/";
+
         if(loading || googleLoading){
           return <Loading/>
         }
         if (error || googleError){
           signInError = <span className="label-text-alt text-red-500">{error?.message || googleError?.message}</span>
         }
-        if (googleUser) {
-          console.log(googleUser);
+        if (user || googleUser) {
+          navigate(from, { replace: true});
         }
         const onSubmit = (data) => {
           console.log(data);
@@ -121,7 +124,7 @@ const Login = () => {
             <input className="mt-3 btn border-none text-primary bg-accent hover:text-secondary tracking-wider w-full max-w-xs" type="submit" value='Login'/>
             <p className="text-sm mt-2 mb-5">Don't have a account?<Link to="/signup" className="text-accent"> Create now</Link></p>
           <div className="divider">OR</div>
-            <input className="btn btn-outline text-primary hover:text-secondary hover:bg-primary tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>
+            <input onClick={() => signInWithGoogle()} className="btn btn-outline text-primary hover:text-secondary hover:bg-primary tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>
           </form>
         </div>
       </div>

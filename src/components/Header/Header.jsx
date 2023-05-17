@@ -2,24 +2,28 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { IconChevronDown, IconMenu } from "@tabler/icons-preact";
-import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase.init";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth)
+  const logout = () => {
+    signOut(auth)
+  }
   const navItems = (
     <React.Fragment>
       <li>
         <NavLink to="/contact" className="nav-link">Contact us</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Log in</NavLink>
+        <NavLink to="/role" >Role</NavLink>
       </li>
       <li>
         <NavLink to="/signup" >Sign up</NavLink>
       </li>
       <li>
-        <NavLink to="/role" >Role</NavLink>
+        {user? <button className="bg-secondary" onClick={logout}>Sign out</button> : <NavLink to="/login">Login</NavLink>}
       </li>
       <li tabIndex={0}>
         <a>
