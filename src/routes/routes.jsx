@@ -38,6 +38,10 @@ export const router = createBrowserRouter([
         path: "/allvenues",
         element: <AllVenues></AllVenues>,
       },
+      {
+        path: "/",
+        element: <AllVenues></AllVenues>,
+      }
     ],
   },
 ]);

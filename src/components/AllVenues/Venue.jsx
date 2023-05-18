@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconBookmarkPlus } from "@tabler/icons-preact";
+import VenueDetais from './VenueDetails/VenueDetais';
 
 const HomeVenues = (props) => {
     return (
@@ -17,7 +18,7 @@ const HomeVenues = (props) => {
             <p className="line-clamp-2">
               {props.location}
             </p>
-            <button className="btn w-full text-primary mt-6 hover:text-secondary bg-accent border-none">
+            <button className="btn w-full text-primary mt-6 hover:text-secondary bg-accent border-none" onClick={() => <VenueDetais details={props}/>}>
               <IconBookmarkPlus width={18} className="mr-2"></IconBookmarkPlus>
               Book now
             </button>
