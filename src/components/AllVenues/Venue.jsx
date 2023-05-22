@@ -5,7 +5,7 @@ import VenueDetais from './VenueDetails/VenueDetais';
 const HomeVenues = (props) => {
     return (
         <div>
-        <div className="card border-[#e9e9e9] border-[0.2px] bg-base-100">
+        <div className="card border-[#e9e9e9] border-[0.2px] bg-base-100" onClick={() => <VenueDetais></VenueDetais>}>
           <figure>
             <div
               className="hero h-64"

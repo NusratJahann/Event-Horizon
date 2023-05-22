@@ -8,6 +8,7 @@ import SetRole from "../components/SetRole/SetRole";
 import AllVenues from "../components/AllVenues/AllVenues";
 import RequireAuth from "../components/Login/RequireAuth"
 import Venues from "../components/Home/Banner/Venues";
+import NotFound from "../components/Shared/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: [<Banner />, <Venues></Venues>],
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
       {
         path: "/contact",
@@ -41,7 +46,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <AllVenues></AllVenues>,
-      }
+      },
     ],
   },
 ]);
