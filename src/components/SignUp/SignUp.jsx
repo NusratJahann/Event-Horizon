@@ -53,14 +53,14 @@ const SignUp = () => {
           navigate('/contact')
         }
   return (
-    <div className="hero min-h-screen text-primary py-[3rem]">
+    <div className="hero min-h-screen  py-[3rem]">
       <div className="card w-96 border-[#e9e9e9] border-[0.2px] bg-base-100">
         <div className="card-body">
           <p className="text-3xl font-serif text-center pb-5">Sign Up</p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text text-primary">Name</span>
+                <span className="label-text ">Name</span>
               </label>
               <input
                 type="name"
@@ -83,7 +83,7 @@ const SignUp = () => {
             </div>
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text text-primary">Email</span>
+                <span className="label-text ">Email</span>
               </label>
               <input
                 type="email"
@@ -115,7 +115,7 @@ const SignUp = () => {
             </div>
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text text-primary">Password</span>
+                <span className="label-text ">Password</span>
               </label>
               <input
                 type="password"
@@ -147,10 +147,10 @@ const SignUp = () => {
               </label>
             </div>
 
-            <input className="mt-3 btn border-none text-primary bg-accent hover:text-secondary tracking-wider w-full max-w-xs" type="submit" value='Sign up'/>
-            <p className="text-sm mt-2 mb-5">Already have a account?<Link to="/login" className="text-accent"> Please login</Link></p>
+            <input className="mt-3 btn border-none text-neutral bg-primary hover:text-white hover:bg-neutral tracking-wider w-full max-w-xs" value='Sign Up'/>
+            <p className="text-sm mt-2 mb-5">Already have a account?<Link to="/login" className="text-primary"> Please login</Link></p>
           <div className="divider">OR</div>
-            <input className="btn btn-outline text-primary hover:text-secondary hover:bg-primary tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>
+            <input className="btn btn-outline hover:text-white hover:bg-neutral tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>
           </form>
         </div>
       </div>

@@ -7,10 +7,10 @@ export default {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          secondary: "#ffffff",
-          primary: "#0d0d0d",
-          accent: "#f2a905",
+        eventHorizontheme: {
+          primary: "#F2A905",
+          neutral: "#0D0D0D",       
+          "base-100": "#FFFFFF",
         },
       },
     ],

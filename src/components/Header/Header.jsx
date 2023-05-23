@@ -42,7 +42,7 @@ const Header = () => {
     </React.Fragment>
   );
   return (
-    <div className="border-[#e9e9e9] border-b-[1px] text-primary">
+    <div className="border-[#e9e9e9] border-b-[1px] ">
       <div className="navbar bg-base-100 py-3 px-10 mx-auto max-w-[1440px]">
         <div className="navbar-start">
           <div className="dropdown">

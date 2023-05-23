@@ -1,0 +1,3 @@
+.bg-hover:hover{
+    @apply bg-primary bg-opacity-5 transition-colors;
+}

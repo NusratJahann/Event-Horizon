@@ -3,7 +3,7 @@ import logo from '../../assets/broken_logo.svg'
 
 const Footer = () => {
   return (
-<footer className="footer p-10 flex justify-evenly flex-col sm:flex-row bg-accent text-secondary-content">
+<footer className="footer p-10 flex justify-evenly flex-col sm:flex-row bg-primary">
   <div>
     <img src={logo} alt="Logo" className="w-24" />
   </div> 
