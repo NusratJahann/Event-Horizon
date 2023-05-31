@@ -147,7 +147,7 @@ const SignUp = () => {
               </label>
             </div>
 
-            <input className="mt-3 btn border-none text-neutral bg-primary hover:text-white hover:bg-neutral tracking-wider w-full max-w-xs" value='Sign Up'/>
+            <input className="mt-3 btn border-none text-neutral bg-primary hover:text-white hover:bg-neutral tracking-wider w-full max-w-xs" value='Sign Up' type="submit"/>
             <p className="text-sm mt-2 mb-5">Already have a account?<Link to="/login" className="text-primary"> Please login</Link></p>
           <div className="divider">OR</div>
             <input className="btn btn-outline hover:text-white hover:bg-neutral tracking-wider w-full max-w-xs" type="submit" value='Continue with google'/>

@@ -35,9 +35,9 @@ const Header = () => {
           </a>
         )}
         {user && (
-          <ul className="p-2 shadow bg-base-100">
+          <ul className="p-2 shadow bg-base-100 z-10">
             <li>
-              <a>Dashboard</a>
+              <NavLink to='/dashboard'>Dashboard</NavLink>
             </li>
             <li>
               <a onClick={logout}>Log out</a>

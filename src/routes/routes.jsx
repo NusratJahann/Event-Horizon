@@ -9,6 +9,9 @@ import AllVenues from "../components/AllVenues/AllVenues";
 import RequireAuth from "../components/Login/RequireAuth"
 import Venues from "../components/Home/Banner/Venues";
 import NotFound from "../components/Shared/NotFound/NotFound";
+import Dashboard from "../components/Dashboard/Dashboard";
+import Profile from "../components/Dashboard/Profile/Profile";
+import SavedVenues from "../components/Dashboard/SavedVenues/SavedVenues";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +50,20 @@ export const router = createBrowserRouter([
         path: "/",
         element: <AllVenues></AllVenues>,
       },
+      {
+        path: "/dashboard",
+        element: <RequireAuth><Dashboard/></RequireAuth>,
+        children: [
+          {
+            path: "/dashboard/profile",
+            element: <Profile></Profile>
+          },
+          {
+            path: "/dashboard/saved-venues",
+            element: <SavedVenues></SavedVenues>
+          },
+        ]
+      }
     ],
   },
 ]);
