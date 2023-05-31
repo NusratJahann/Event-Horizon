@@ -14,33 +14,39 @@ const Header = () => {
   const navItems = (
     <React.Fragment>
       <li>
-        <NavLink to="/contact" className="nav-link">Contact us</NavLink>
+        <NavLink to="/contact" className="nav-link">
+          Contact us
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/role" >Role</NavLink>
+        <NavLink to="/role">Role</NavLink>
       </li>
-      <li>
-        <NavLink to="/signup" >Sign up</NavLink>
-      </li>
-      <li>
-        {user? <button className="bg-secondary" onClick={logout}>Sign out</button> : <NavLink to="/login">Login</NavLink>}
-      </li>
+        {!user &&
+          <>
+            <li><NavLink to="/signup">Sign up</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+          </>
+        }
       <li tabIndex={0}>
-        <a>
-          Profile
-          <IconChevronDown size={20} className="" />
-        </a>
-        <ul className="p-2 shadow bg-base-100">
-          <li>
-            <a>Dashboard</a>
-          </li>
-          <li>
-            <a>Log out</a>
-          </li>
-        </ul>
+        {user && (
+          <a>
+            Profile
+            <IconChevronDown size={20}/>
+          </a>
+        )}
+        {user && (
+          <ul className="p-2 shadow bg-base-100">
+            <li>
+              <a>Dashboard</a>
+            </li>
+            <li>
+              <a onClick={logout}>Log out</a>
+            </li>
+          </ul>
+        )}
       </li>
     </React.Fragment>
-  );
+    )
   return (
     <div className="border-[#e9e9e9] border-b-[1px] ">
       <div className="navbar bg-base-100 py-3 px-10 mx-auto max-w-[1440px]">
