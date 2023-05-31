@@ -11,25 +11,25 @@ const Venues = () => {
   const venues = useContext(VenueContext);
   return (
     <div className="w-full justify-center flex flex-col items-center py-[10rem]">
-      <p className="text-center md:text-4xl text-3xl font-serif text-primary mb-8">
+      <p className="text-center md:text-4xl text-3xl font-serif  mb-8">
         Venues
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-[80vw] w-[90vw] gap-5 content-center text-primary">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-[80vw] w-[90vw] gap-5 content-center ">
         {venues.slice(0, 4).map((venue) => (
           <div className="card border-[#e9e9e9] border-[0.2px] bg-base-100">
-            <figure>
+            <figure> 
               <div
                 className="hero h-64"
                 style={{ backgroundImage: `url(${venue.image})` }}
                 alt="Shoes"
               />
             </figure>
-            <div className="card-body text-primary">
+            <div className="card-body ">
               <h2 className="card-title font-serif font-light">{venue.name}</h2>
               <p className="line-clamp-2">{venue.location}</p>
               <button
-                className="btn w-full text-primary mt-6 hover:text-secondary bg-accent border-none"
+                className="btn w-full  mt-6 hover:text-white text-neutral  hover:bg-neutral bg-primary border-none"
                 onClick={() => <VenueDetais details={venue} />}
               >
                 <IconBookmarkPlus
@@ -45,7 +45,7 @@ const Venues = () => {
 
       <Link
         to="/allvenues"
-        className="flex btn bg-white border-none text-primary hover:bg-white hover:text-accent mt-8 text-lg"
+        className="flex btn bg-white border-none  hover:bg-white hover:text-accent mt-8 text-lg text-neutral"
       >
         See More <IconChevronRight></IconChevronRight>
       </Link>

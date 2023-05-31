@@ -13,12 +13,12 @@ const HomeVenues = (props) => {
               alt="Shoes"
             />
           </figure>
-          <div className="card-body text-primary">
+          <div className="card-body">
             <h2 className="card-title font-serif font-light">{props.name}</h2>
             <p className="line-clamp-2">
               {props.location}
             </p>
-            <button className="btn w-full text-primary mt-6 hover:text-secondary bg-accent border-none" onClick={() => <VenueDetais details={props}/>}>
+            <button className="btn w-full text-neutral mt-6 hover:text-white hover:bg-neutral bg-primary border-none" onClick={() => <VenueDetais details={props}/>}>
               <IconBookmarkPlus width={18} className="mr-2"></IconBookmarkPlus>
               Book now
             </button>

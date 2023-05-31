@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-<div className="hero min-h-screen bg-secondary text-primary py-[3rem]">
+<div className="hero min-h-screen bg-secondary py-[3rem]">
   <div className="hero-content sm-w-full w-[80vw] flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left lg:pl-16">
       <h1 className="md:text-4xl text-3xl font-serif">Contact Now</h1>
@@ -12,20 +12,18 @@ const Contact = () => {
       <div className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-primary">Email</span>
+            <span className="label-text">Email</span>
           </label>
           <input type="text" placeholder="email" className="input input-bordered border-[#cccccc]" />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-primary">Message</span>
+            <span className="label-text">Message</span>
           </label>
           <textarea className="textarea textarea-bordered border-[#cccccc] textarea-lg w-full max-w-x" placeholder="Message  "></textarea>
         </div>
         <div className="form-control mt-6">
-        <button className="btn border-none text-primary bg-accent hover:text-secondary tracking-wider">
-              Send Message
-            </button>
+        <button className="btn w-full text-neutral mt-6 hover:text-white hover:bg-neutral bg-primary border-none">Send Message</button>
         </div>
       </div>
     </div>
